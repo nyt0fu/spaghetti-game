@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spaghetti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="dining-room"></div>
+  <div id="kitchen">
+    <div id="kitchen-stage">
+
+      <div class="station-item" id="pot-area">
+        <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-label="sauce pot">
+          <!-- knob -->
+          <rect x="43" y="8" width="14" height="12" rx="3" fill="#555"/>
+          <!-- lid top face -->
+          <ellipse cx="50" cy="26" rx="38" ry="7" fill="#555"/>
+          <!-- lid rim -->
+          <ellipse cx="50" cy="30" rx="38" ry="8" fill="#4a4a4a"/>
+          <!-- handles -->
+          <rect x="3" y="48" width="15" height="18" rx="4" fill="#444"/>
+          <rect x="82" y="48" width="15" height="18" rx="4" fill="#444"/>
+          <!-- body -->
+          <rect x="16" y="30" width="68" height="74" rx="6" fill="#3a3a3a"/>
+          <!-- sauce surface -->
+          <ellipse cx="50" cy="35" rx="30" ry="7" fill="#8b0000"/>
+        </svg>
+      </div>
+
+      <div class="station-item" id="spaghetti-area">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" aria-label="spaghetti pile">
+          <path d="M5,68 Q18,56 30,68 Q42,78 54,68 Q66,56 78,68 Q88,76 96,68" stroke="#d4a840" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M4,60 Q18,70 32,58 Q46,46 58,58 Q70,70 82,58 Q91,50 97,60" stroke="#c89030" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M8,52 Q22,62 36,50 Q50,38 62,50 Q74,62 84,50 Q92,42 97,52" stroke="#e0b848" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M14,44 Q28,54 42,42 Q56,30 68,42 Q80,54 88,44" stroke="#d4a840" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M18,36 Q32,46 46,34 Q60,22 72,34 Q82,46 88,36" stroke="#c89030" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24,28 Q36,38 50,26 Q62,14 74,26 Q82,36 87,28" stroke="#e0b848" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M30,20 Q42,30 56,18 Q68,8 78,18 Q84,26 87,20" stroke="#d4a840" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M38,12 Q50,4 62,12 Q70,20 76,12" stroke="#c89030" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="station-item" id="bowl-area">
+        <p id="bowl-prompt">ADD SAUCE TO THE SPAGHETTI</p>
+        <svg id="bowl-svg" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-label="pasta bowl">
+          <defs>
+            <clipPath id="bowl-clip">
+              <path d="M22,26 Q22,60 60,60 Q98,60 98,26 Z"/>
+            </clipPath>
+          </defs>
+          <!-- bowl outer body -->
+          <path d="M8,24 Q8,72 60,72 Q112,72 112,24 Z" fill="#c8b89a"/>
+          <!-- rim -->
+          <ellipse cx="60" cy="24" rx="52" ry="13" fill="#d4c4a0"/>
+          <!-- inner bowl base -->
+          <path d="M22,26 Q22,60 60,60 Q98,60 98,26 Z" fill="#f0e8d0"/>
+          <!-- sauce fill — y and height driven by scoop.js -->
+          <rect id="bowl-fill" x="0" y="60" width="120" height="0" fill="#c0392b" clip-path="url(#bowl-clip)"/>
+          <!-- inner rim sits on top of fill -->
+          <ellipse cx="60" cy="26" rx="38" ry="9" fill="#f5f0e0"/>
+        </svg>
+      </div>
+
+      <div id="vig-tab">Owed: $0</div>
+    </div>
+    <div id="kitchen-banner">spaghetti game</div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
